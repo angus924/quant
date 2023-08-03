@@ -2,7 +2,7 @@
 
 ***QUANT: A Minimalist Interval Method for Time Series Classification***
 
-[arXiv:](https://arxiv.org/abs/) (preprint) [TBA]
+[arXiv:2308.00928](https://arxiv.org/abs/2308.00928) (preprint)
 
 
 > <div align="justify">We show that it is possible to achieve the same accuracy, on average, as the most accurate existing interval methods for time series classification on a standard set of benchmark datasets using a single type of feature (quantiles), fixed intervals, and an 'off the shelf' classifier. This distillation of interval-based approaches represents a fast and accurate method for time series classification, achieving state-of-the-art accuracy on the expanded set of 142 datasets in the UCR archive with a total compute time (training and inference) of less than 15 minutes using a single CPU core.</div>
@@ -11,10 +11,10 @@ Please cite as:
 
 ```bibtex
 @article{dempster_etal_2023,
-  author  = {Dempster, Angus and Schmidt, Daniel F and Webb, Geoffrey I},
-  title   = {{QUANT}: A Minimalist Interval Method for Time Series Classification},
-  year    = {2023},
-  journal = {arXiv:}
+  author = {Dempster, Angus and Schmidt, Daniel F and Webb, Geoffrey I},
+  title  = {{QUANT}: A Minimalist Interval Method for Time Series Classification},
+  year   = {2023},
+  note   = {arXiv:2308.00928}
 }
 ```
 

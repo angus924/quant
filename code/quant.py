@@ -1,7 +1,7 @@
 # Angus Dempster, Daniel F Schmidt, Geoffrey I Webb
 
 # QUANT: A Minimalist Interval Method for Time Series Classification
-# https://arxiv.org/abs/
+# https://arxiv.org/abs/2308.00928
 
 import numpy as np
 
