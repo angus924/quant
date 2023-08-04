@@ -42,7 +42,7 @@ Please cite as:
 from quant import Quant
 from sklearn.ensemble import ExtraTreesClassifier
 
-[...] # load data
+[...] # load data -> torch.float32, [num_examples, 1, length]
 
 transform = Quant()
 
