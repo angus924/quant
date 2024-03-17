@@ -36,6 +36,10 @@ Please cite as:
 
 ### [`quant.py`](./code/quant.py)
 
+## Documentation
+
+[Documentation](./doc.md) *[in progress]*
+
 ## Examples
 
 ```python
