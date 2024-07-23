@@ -82,10 +82,28 @@ This parameter is controlled by the `div` argument in the `Quant()` constructor.
 
 ## Reproducing the Experiments
 
-### UCR Archive
+### Download Datasets and Resample Indices
 
-[TBA]
+Download the UCR datasets (`*.ts` versions) and resample indices.
 
-### Sensitivity Analysis
+The datasets and resample indices can be downloaded via: [tsml-eval](https://github.com/time-series-machine-learning/tsml-eval/blob/main/tsml_eval/publications/y2023/tsc_bakeoff/tsc_bakeoff_2023.ipynb).
 
-[TBA]
+### Run the Experiments
+
+Use [`run.py`](./code/run.py) and [`ucr142.txt`](./code/ucr142.txt).
+
+```shell
+python run.py -d ucr142.txt
+```
+
+|options|||
+|-|-|-|
+|`-i` `--input_path`|input path|./datasets|
+|`-o` `--output_path`|output path|./|
+|`-d` `--datasets`|datasets|
+|`-r` `--num_resamples`|number of resamples|30|
+|`-p` `--resample_indices_path`|resample path|./indices|
+|`-m` `--depth`|depth (Quant hyperparameter)|6|
+|`-v` `--div`|div (Quant hyperparameter)|4|
+|`-e` `--num_estimators`|num trees (classifier)|200|
+|`-f` `--max_features`|num features per split (classifier)|0.1|

@@ -38,7 +38,7 @@ Please cite as:
 
 ## Documentation
 
-[Documentation](./doc.md) *[in progress]*
+[Documentation](./doc.md)
 
 ## Examples
 
