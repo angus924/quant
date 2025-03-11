@@ -2,6 +2,7 @@
 
 # QUANT: A Minimalist Interval Method for Time Series Classification
 # https://arxiv.org/abs/2308.00928
+# (update to handle multivariate per https://github.com/angus924/aaltd2024)
 
 import numpy as np
 
@@ -43,7 +44,7 @@ def f_quantile(X, div = 4):
 
     if n == 1:
 
-        return X
+        return X.view(X.shape[0], 1, X.shape[1] * X.shape[2])
     
     else:
         
@@ -51,14 +52,16 @@ def f_quantile(X, div = 4):
 
         if num_quantiles == 1:
 
-            return X.quantile(torch.tensor([0.5]), dim = -1).permute(1, 2, 0)
+            quantiles = X.quantile(torch.tensor([0.5]), dim = -1).permute(1, 2, 0)
+
+            return quantiles.view(quantiles.shape[0], 1, quantiles.shape[1] * quantiles.shape[2])
         
         else:
             
             quantiles = X.quantile(torch.linspace(0, 1, num_quantiles), dim = -1).permute(1, 2, 0)
             quantiles[..., 1::2] = quantiles[..., 1::2] - X.mean(-1, keepdims = True)
 
-            return quantiles
+            return quantiles.view(quantiles.shape[0], 1, quantiles.shape[1] * quantiles.shape[2])
 
 # == interval model (per representation) =======================================
 
